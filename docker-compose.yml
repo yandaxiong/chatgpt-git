@@ -1,0 +1,31 @@
+version: '3'
+
+services:
+  chatgpt-proxy:
+    image: aceysx/xinqiu-be:v1
+    container_name: chatgpt-proxy
+    ports:
+      - 8000:8080
+    command: sh -c "java -jar /work/app.jar"
+    environment:
+      MAX_TOKENS: 4096
+      TEMPERATURE: 0.9
+
+      CONTENT: 玩赚chatGPT 知识星球
+      AUTH_KEY: xinqiu
+      FREE_API_KEY:
+      NO_AUTH_CONTENT: apikey 无效
+    networks:
+      main:
+        aliases:
+          - chatgpt-proxy
+  app:
+    image: aceysx/xinqiu-web:v1
+    ports:
+      - 80:80
+    networks:
+      main:
+        aliases:
+          - chatgpt
+networks:
+  main:
