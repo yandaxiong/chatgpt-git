@@ -11,7 +11,7 @@ import org.springframework.stereotype.Component;
 @Configuration
 @ConfigurationProperties(prefix = "xinqiu")
 public class XinQiuConfig {
-    private String content = "【玩赚chatGPT 知识星球】";
+    private String content = "【AI魔法妙妙屋】";
     private String auth = "xinqiu";
     private String freeApiKey;
     private String notAuthContent;

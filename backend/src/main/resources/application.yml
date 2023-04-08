@@ -22,7 +22,7 @@ openai:
 
 
 xinqiu:
-  content: ${CONTENT:【玩赚chatGPT 知识星球】}
+  content: ${CONTENT:【AI魔法妙妙屋】}
   auth: ${AUTH_KEY:xinqiu}
   freeApiKey: ${FREE_API_KEY:}
   notAuthContent: ${NO_AUTH_CONTENT:apikey无效}
